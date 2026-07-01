@@ -22,16 +22,22 @@
 <div class="wrap">
 
   <h2>SKU 规模 × 价格架构总表</h2>
-  <p class="src">数据源：各站 Shopify /products.json 全量翻页（buddhastone 走 scrapling 兜底，24 页/6000 上限=下限值）。</p>
+  <p class="src">数据源：各站 Shopify /products.json 全量翻页（buddhastone 走 scrapling 兜底，24 页/6000 上限=下限值）。<b>价格用「核心带 P10–P90」（剔除头尾各 10% 极值），因为原始 min–max 被非饰品 SKU 严重污染</b>——见下方极值说明。</p>
   <table>
-    <tr><th>站点</th><th>SKU 数</th><th>价格区间</th><th>中位价</th><th>均价</th><th>P25–P75</th><th>模式判定</th></tr>
-    <tr class="hi"><td><b>TheFuMaster</b></td><td>322</td><td>$39.99–129.99</td><td>$59.99</td><td>$54.99</td><td>$39.99–59.99</td><td>精简 + 窄 premium</td></tr>
-    <tr><td>Conscious Items</td><td>286</td><td>$1–119</td><td>$34.45</td><td>$39.19</td><td>$29–49</td><td>精品 SKU + 低价大众</td></tr>
-    <tr><td>Tiny Rituals</td><td>987</td><td>$0.75–1095</td><td>$78.00</td><td>$133.82</td><td>$48–178</td><td>中等策展 + 高端</td></tr>
-    <tr><td>Karma & Luck <span class="tag t-warn">创始人爱</span></td><td><b>2109</b></td><td>$0.99–3699</td><td>$89.00</td><td>$137.56</td><td>$59–149</td><td>广 SKU + premium 呈现</td></tr>
-    <tr><td>Energy Muse</td><td>3122</td><td>$2.37–14999</td><td>$29.95</td><td>$65.21</td><td>$19.88–58.88</td><td>广铺 + 长尾水晶</td></tr>
-    <tr><td>Buddha Stones <span class="tag t-warn">想学·广铺</span></td><td><b>6000+</b></td><td>$1–4399</td><td>$36.59</td><td>—</td><td>—</td><td>极广铺 + 低价走量</td></tr>
+    <tr><th>站点</th><th>SKU 数</th><th>核心价格带<br>(P10–P90)</th><th>中位价</th><th>全区间<br>(含长尾)</th><th>模式判定</th></tr>
+    <tr class="hi"><td><b>TheFuMaster</b></td><td>322</td><td><b>$40–90</b></td><td>$59.99</td><td>$39.99–129.99</td><td>精简 + 窄 premium</td></tr>
+    <tr><td>Conscious Items</td><td>286</td><td>$19–59</td><td>$34.45</td><td>$8–119</td><td>精品 SKU + 低价大众</td></tr>
+    <tr><td>Tiny Rituals</td><td>987</td><td>$38–295</td><td>$78.00</td><td>$3–1095</td><td>中等策展 + 高端</td></tr>
+    <tr><td>Karma & Luck <span class="tag t-warn">创始人爱</span></td><td><b>2109</b></td><td>$25–249</td><td>$89.00</td><td>$5–3699</td><td>广 SKU + premium 呈现</td></tr>
+    <tr><td>Energy Muse</td><td>3122</td><td>$13–100</td><td>$29.95</td><td>$8–14999</td><td>广铺 + 长尾水晶</td></tr>
+    <tr><td>Buddha Stones <span class="tag t-warn">想学·广铺</span></td><td><b>6000+</b></td><td>$26–57</td><td>$36.59</td><td>$10–4399</td><td>极广铺 + 低价走量</td></tr>
   </table>
+  <div class="callout co-key">
+    <b>极值说明（为何不看 min–max）：</b> 各站原始最低/最高价并非真实饰品价——最低价多为「运费险/数字产品」（K&L $0.99=ShipAid 运费险、Conscious $1=电子生辰图），最高价多为「家居大摆件/水晶原石标本」（K&L $3699=风水树、Energy Muse $14999=220 磅水晶原石、Tiny Rituals $1095=水晶标本）。这些不与 TheFuMaster 的手链/项链竞争，故用 P10–P90 核心带看真实价格心智。
+  </div>
+  <div class="callout co-good">
+    <b>看核心带后结论更清晰：</b> TheFuMaster 核心带 $40–90（中位 $60）= 干净的 premium-mid；K&L($25–249)/Tiny Rituals($38–295) 更高更宽；Buddha($26–57)/Energy Muse($13–100)/Conscious($19–59) 更低走量。TheFuMaster 价格心智在全组最<b>集中且不打价格战</b>，是资产。
+  </div>
 
   <div class="callout co-key">
     <b>核心结论：「广铺 vs 精品」是伪命题——TheFuMaster本就已精简。</b>
@@ -39,7 +45,7 @@
   </div>
 
   <h2>「杂」的真正病根：多维交叉分类（数据实锤）</h2>
-  <p class="lead">TheFuMaster 322 个产品，每个身上叠了 6-8 条交叉标签轴。用户进店面对这些轴的笛卡尔积，无从下手——<b>这才是「杂」，不是 SKU 太多。</b></p>
+  <p class="lead">TheFuMaster 322 个产品，每个身上同时贴了 6-8 个不同维度的标签。用户进店想找一款，要在 <b>6 组维度里反复交叉勾选</b>（先选意图、再选五行、再选品类、再选材质…），组合数量爆炸、路径太长——<b>这才是「杂」，不是 SKU 太多。</b></p>
   <div class="grid2">
     <div class="card"><h3>TheFuMaster 6 条交叉轴（标签实测）</h3>
       <ul class="clean">
@@ -57,9 +63,42 @@
     </div>
   </div>
 
+  <h2>病灶实拍：SHOP 下拉菜单一次抛出 5 列 40+ 入口</h2>
+  <p class="lead">下面是 TheFuMaster 首页 SHOP 悬停后 mega-menu 的结构复刻（依据实测菜单还原）。问题不在"有多少品类"，而在<b>一屏同时并列 5 个不同性质的分类维度</b>，让用户在入口就被迫做多选题。</p>
+  <div style="background:#3a0a0f;border-radius:12px;padding:20px 18px;box-shadow:var(--shadow);overflow-x:auto">
+    <div style="color:#e6c98a;font-size:12px;letter-spacing:1px;margin-bottom:12px;border-bottom:1px solid #6a2028;padding-bottom:8px">SHOP ▾ 悬停后展开（实测还原）</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;color:#f3e7d3;font-size:12.5px;min-width:640px">
+      <div><div style="color:#e6c98a;font-weight:700;margin-bottom:6px">BY INTENTION<br><span style="font-weight:400;font-size:10px;opacity:.7">目的·6项</span></div>Luck & Fu · Wealth & Prosperity · Love & Harmony · Protection & Grounding · Clarity & Focus · Calm & Balance</div>
+      <div><div style="color:#e6c98a;font-weight:700;margin-bottom:6px">BY ELEMENT<br><span style="font-weight:400;font-size:10px;opacity:.7">属性·5项</span></div>Metal · Wood · Water · Fire · Earth</div>
+      <div><div style="color:#e6c98a;font-weight:700;margin-bottom:6px">BY TYPE<br><span style="font-weight:400;font-size:10px;opacity:.7">品类·6项</span></div>Bracelets · Necklaces & Pendants · Rings · Earrings · Mala Beads · Handheld Beads</div>
+      <div style="outline:2px solid #ff7a7a;outline-offset:3px;border-radius:4px"><div style="color:#ff9a9a;font-weight:700;margin-bottom:6px">BY MATERIAL<br><span style="font-weight:400;font-size:10px;opacity:.8">属性·15+项 ⚠</span></div>Sandalwood · Bodhi · Jujube Wood · Jade · Agate · Obsidian · Tiger Eye · Cinnabar · Chalcedony · Pearl · Turquoise · Crystal · Liuli · Shoushan Stone…</div>
+      <div><div style="color:#e6c98a;font-weight:700;margin-bottom:6px">BY SYMBOL<br><span style="font-weight:400;font-size:10px;opacity:.7">属性·6+项</span></div>Lotus · Pixiu · Yin & Yang · Tree of Life · Evil Eye · Koi Fish</div>
+    </div>
+    <div style="color:#ffb3b3;font-size:11.5px;margin-top:12px;border-top:1px solid #6a2028;padding-top:8px">↑ 5 列并置 = 一次抛出 40+ 入口；红框材质列 15+ 项含 Liuli/Shoushan Stone 等欧美陌生词。<span style="opacity:.7">（生肖轴另有 12 项，图外）</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card" style="border-top:4px solid var(--bad)"><h3>为什么这样不妥（4 个具体问题）</h3>
+      <ul class="clean">
+        <li><b>维度不同质，却平级并排</b>：BY INTENTION（我想要什么）是"目的"，BY MATERIAL/BY SYMBOL（玉/貔貅）是"属性"。把"目的"和"属性"摆成同级，用户不知道该从哪一列入手。</li>
+        <li><b>选择过载</b>：一次抛出 5 列 40+ 链接。心理学上选项越多、决策越瘫痪（choice overload），跳出率上升。K&L 一次只给「性别→品类」两步。</li>
+        <li><b>材质列过长且太专业</b>：15+ 种材质（Liuli/Shoushan Stone/Chalcedony）对欧美用户是陌生名词，放进主入口=劝退，应下沉为集合页里的筛选器。</li>
+        <li><b>入口重复交叉</b>：同一款手链会同时出现在 意图/五行/品类/材质/符号 多列里，用户点哪列都能到、也哪列都记不住，路径没有唯一主线。</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:4px solid var(--good)"><h3>怎么修（两步主线 + 筛选下沉）</h3>
+      <ul class="clean">
+        <li><b>主导航只留 2 步</b>：① BY INTENTION（意图，情感入口，最好卖）② BY TYPE（品类，手链/项链/戒指）。这两列覆盖 90% 用户的找货路径。</li>
+        <li><b>五行 / 材质 / 符号 / 生肖 → 降为集合页内的筛选器（filter）</b>，不占主入口。用户进了某个意图/品类页后，再按需勾选。</li>
+        <li><b>五行 & 生肖单独做成「策展系列」卡片</b>（如首图右侧的 FIND YOUR ELEMENT 视觉），当作故事化专题露出，而不是塞进冷冰冰的下拉列。</li>
+        <li>参照 K&L：2109 SKU 也只用「性别 × 品类」两步导航——<b>简是设计选择，不是被 SKU 逼的。</b></li>
+      </ul>
+    </div>
+  </div>
+
   <h2>TheFuMaster独占护城河（竞品全都没有）</h2>
   <div class="callout co-good">
-    <b>五行（金木水火土）+ 中国生肖 + 福文化/意图定制</b> = 5 家竞品无一具备。K&L 用 Evil Eye(637)/Hamsa(288) 中东符号；Buddha 泛佛教；Energy Muse/Conscious 泛水晶。呼应市场趋势「中式好运饰品缺主导西方品牌 = 品类留白」。TheFuMaster已布 zodiac-horse(14) 对齐 <b>2026 马年</b>；CNY(2026-01-29) 搜索 3-5x 峰值窗口。
+    <b>五行（金木水火土）+ 中国生肖 + 福文化/意图定制</b> = 5 家竞品无一具备。K&L 用 Evil Eye(637)/Hamsa(288) 中东符号；Buddha 泛佛教；Energy Muse/Conscious 泛水晶。呼应市场趋势「中式好运饰品缺主导西方品牌 = 品类留白」。TheFuMaster已布 zodiac-horse(14) 对齐 <b>2026 马年</b>；农历新年（春节，2026-01-29） 搜索 3-5x 峰值窗口。
   </div>
 
   <h2>风险信号（数据发现）</h2>
@@ -72,7 +111,7 @@
   <h2>选品方向建议</h2>
   <table>
     <tr><th>#</th><th>建议</th><th>数据支撑</th></tr>
-    <tr><td>1</td><td><b>守精简、砍轴不砍品</b>：主导航降到 2 轴（意图 + 品类），其余降为筛选器。</td><td>6 轴笛卡尔积=病根</td></tr>
+    <tr><td>1</td><td><b>守精简、砍轴不砍品</b>：主导航降到 2 轴（意图 + 品类），其余降为筛选器。</td><td>6 组维度交叉=病根</td></tr>
     <tr><td>2</td><td><b>补足非手链品类</b>：necklace/ring 呈现与 SKU 适度加厚（对标 K&L necklace 375）。</td><td>手链 56% 过度集中</td></tr>
     <tr><td>3</td><td><b>五行×生肖做成策展系列</b>：如"2026马年本命""五行平衡套装"，别埋在 filter 里。</td><td>独占资产 + 马年窗口</td></tr>
     <tr><td>4</td><td><b>定价守 $40-90 窄带</b>，用套装/礼盒向上拉 AOV，不向下打价格战。</td><td>均价 $54.99 < 中位，有上拉空间</td></tr>
